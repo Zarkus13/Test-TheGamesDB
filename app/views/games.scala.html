@@ -1,0 +1,11 @@
+@(games: Seq[Game], term: String)
+
+@main("Games matching " + term) {
+    <h1>Results for @term</h1>
+
+    <ul>
+    @for(g <- games) {
+        <li>@g.title</li>
+    }
+    </ul>
+}
